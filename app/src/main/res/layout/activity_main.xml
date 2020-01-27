@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvspeech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="37sp"
+        android:textColor="@color/White"
+        android:text="My speech is between"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:text="Minutes"
+        android:textSize="37sp"
+        app:layout_constraintLeft_toRightOf="@id/tvFrom"
+        app:layout_constraintTop_toTopOf="@+id/tvFrom"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFrom"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:text="Minutes"
+        android:textSize="37sp"
+        app:layout_constraintLeft_toRightOf="@id/tvTo"
+        app:layout_constraintTop_toTopOf="@+id/tvTo"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTo"/>
+
+    <TextView
+        android:id="@+id/tvAnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="and"
+        android:textColor="@color/White"
+        android:textSize="45sp"
+        app:layout_constraintTop_toBottomOf="@id/tvFrom"
+        app:layout_constraintBottom_toTopOf="@id/tvTo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnToPlus"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="+1"
+        android:textAlignment="center"
+        android:onClick="onMath"
+        app:layout_constraintTop_toTopOf="@+id/tvTo"
+        app:layout_constraintRight_toLeftOf="@+id/tvTo"/>
+
+    <Button
+        android:id="@+id/btnFromPlus"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="+1"
+        android:textAlignment="center"
+        android:onClick="onMath"
+        app:layout_constraintTop_toTopOf="@+id/tvFrom"
+        app:layout_constraintRight_toLeftOf="@+id/tvFrom"/>
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="121dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:textSize="65dp"
+        android:text="2"
+        android:textColor="@color/White"
+        android:textAlignment="center"
+        android:background="@color/Black"
+        app:layout_constraintTop_toBottomOf="@id/tvspeech"
+        app:layout_constraintBottom_toTopOf="@id/tvAnd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="121dp"
+        android:layout_height="100dp"
+        android:textSize="65dp"
+        android:text="3"
+        android:layout_marginBottom="40dp"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:background="@color/Black"
+        app:layout_constraintTop_toBottomOf="@id/tvAnd"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnTableTopic"/>
+
+    <Button
+        android:id="@+id/btnFromMinus"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="-1"
+        android:textAlignment="center"
+        android:onClick="onMath"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFrom"
+        app:layout_constraintLeft_toLeftOf="@+id/btnFromPlus"/>
+
+    <Button
+        android:id="@+id/btnToMinus"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="-1"
+        android:textAlignment="center"
+        android:onClick="onMath"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTo"
+        app:layout_constraintRight_toLeftOf="@+id/tvTo"/>
+
+    <Button
+        android:id="@+id/btnTableTopic"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick"
+        android:text="Table Topics 1:00 to 1:30"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartTimer"
+        />
+
+    <Button
+        android:id="@+id/btnStartTimer"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="Start"
+        android:layout_marginBottom="80dp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
